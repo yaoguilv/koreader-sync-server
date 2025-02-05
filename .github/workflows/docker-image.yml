@@ -23,7 +23,7 @@ jobs:
         run: docker buildx build --platform linux/arm64 -t koreadersync:tag --output type=docker,dest=image.tar .
 
       - name: Upload Docker image as artifact
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v4
         with:
           name: docker-image
           path: image.tar
